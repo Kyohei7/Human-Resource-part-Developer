@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+    tools:context=".register.RegisterActivity">
+
+        <TextView
+            android:id="@+id/txt_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="72dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Signup"
+            android:textColor="#46505C"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:hintTextColor="@color/colorPrimary"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="43dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="17dp"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@color/colorPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:hintTextColor="@color/colorPrimary"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="43dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@color/colorPrimary"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="17dp"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@color/colorPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:hintTextColor="@color/colorPrimary"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="43dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="textPassword"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="17dp"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@color/colorPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:hintTextColor="@color/colorPrimary"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="43dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Role"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="17dp"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@color/colorPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="27dp">
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#FBB017"
+                android:text="Masuk"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="6dp"
+                android:alpha="0.18"
+                android:background="@drawable/btn_primary"
+                android:backgroundTint="#FBB017"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="72dp"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:text="Anda sudah punya akun? Masuk disini"
+            android:textColor="#46505C"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+</LinearLayout>
+</layout>
