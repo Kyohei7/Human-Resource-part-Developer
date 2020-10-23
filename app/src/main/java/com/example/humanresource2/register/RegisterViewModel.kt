@@ -39,11 +39,7 @@ class RegisterViewModel: ViewModel(), CoroutineScope {
                 }
             }
             if (response is RegisterResponse) {
-                if (response.message == "Success Register Account!") {
-                    isRegisterLiveData.value = true
-                } else {
-                    isRegisterLiveData.value = false
-                }
+                isRegisterLiveData.value = response.message == "Success Register Account!"
             }
         }
     }
