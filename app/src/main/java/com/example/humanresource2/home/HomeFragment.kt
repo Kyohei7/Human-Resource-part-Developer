@@ -12,6 +12,7 @@ import android.widget.GridLayout
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.humanresource2.R
@@ -42,7 +43,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.recyclerHome.adapter = HomeAdapter()
-        binding.recyclerHome.layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
+        binding.recyclerHome.layoutManager = GridLayoutManager(requireActivity(), 2)
         viewModel.callApiHome()
         subscribeLiveData()
 

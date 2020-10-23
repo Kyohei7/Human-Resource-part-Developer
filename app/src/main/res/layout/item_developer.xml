@@ -4,14 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
-        android:layout_height="380dp"
+        android:layout_width="270dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:outlineAmbientShadowColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,9 +29,9 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_image_developer"
-                    android:layout_width="match_parent"
+                    android:layout_width="72dp"
                     android:layout_margin="16dp"
-                    android:layout_height="180dp"
+                    android:layout_height="72dp"
                     android:layout_gravity="center"
                     android:src="@android:color/background_light"
                     android:layout_marginEnd="15dp"
@@ -44,20 +43,19 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
-                    android:text=""
-                    android:textSize="25dp"
+                    android:text="Muhammad Rizki"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_job_developer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/open_sans"
                     android:gravity="center"
-                    android:text=""
+                    android:text="Android Developer"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="20dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/tv_skill"
@@ -67,9 +65,9 @@
                     android:fontFamily="@font/open_sans"
                     android:background="#FBB017"
                     android:layout_gravity="center"
-                    android:text=""
+                    android:text="Javascript | Kotlin"
                     android:textColor="#fff"
-                    android:textSize="20dp" />
+                    android:textSize="9dp" />
             </LinearLayout>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
