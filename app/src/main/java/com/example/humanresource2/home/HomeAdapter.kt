@@ -8,10 +8,11 @@ import com.example.humanresource2.R
 import com.example.humanresource2.databinding.ItemDeveloperBinding
 import com.example.humanresource2.helper.PreferencesHelper
 import com.squareup.picasso.Picasso
+import java.util.ArrayList
 
-class HomeAdapter: RecyclerView.Adapter<HomeAdapter.HomeHolder>() {
+class HomeAdapter(val items: ArrayList<HomeModel>, val listener: OnClickViewListener): RecyclerView.Adapter<HomeAdapter.HomeHolder>() {
 
-    private val items = mutableListOf<HomeModel>()
+
     private lateinit var sharePref: PreferencesHelper
 
     private fun getPhotoImage(file: String) : String = "http://54.160.226.42:5000/uploads/$file"
@@ -38,9 +39,16 @@ class HomeAdapter: RecyclerView.Adapter<HomeAdapter.HomeHolder>() {
         holder.binding.tvSkill.text = item.skill
         Picasso.get().load(getPhotoImage(item.photo.toString())).
         into(holder.binding.imgImageDeveloper)
+        holder.binding.recyclerHome.setOnClickListener {
+            listener.OnClick(item.id)
+        }
     }
 
     class HomeHolder(val binding: ItemDeveloperBinding ): RecyclerView.ViewHolder(binding.root)
+
+    interface OnClickViewListener {
+        fun OnClick(id: String)
+    }
 
 
 }

@@ -21,8 +21,7 @@
         android:label="fragment_approve"
         tools:layout="@layout/fragment_approve" />
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/profileFragment2"
         android:name="com.example.humanresource2.profile.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:label="ProfileFragment" />
 </navigation>

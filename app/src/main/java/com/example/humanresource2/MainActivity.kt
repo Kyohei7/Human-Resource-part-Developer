@@ -9,6 +9,7 @@ import com.example.humanresource2.databinding.ActivityMainBinding
 import com.example.humanresource2.helper.Constant
 import com.example.humanresource2.helper.PreferencesHelper
 import com.example.humanresource2.home.HomeActivity
+import com.example.humanresource2.home.detail.DetailsDeveloper
 import com.example.humanresource2.login.LoginActivity
 import com.example.humanresource2.register.RegisterActivity
 
