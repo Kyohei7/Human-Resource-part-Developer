@@ -52,13 +52,13 @@ class DetailsDeveloper : AppCompatActivity() {
 
     private fun subscribeLiveData() {
 
-        viewModel.isProgressLiveData.observe(this, Observer {
-            if (it) {
-                binding.progressbar.visibility = View.VISIBLE
-            } else {
-                binding.progressbar.visibility = View.GONE
-            }
-        })
+//        viewModel.isProgressLiveData.observe(this, Observer {
+//            if (it) {
+//                binding.progressbar.visibility = View.VISIBLE
+//            } else {
+//                binding.progressbar.visibility = View.GONE
+//            }
+//        })
         viewModel.detailsLiveData.observe(this, Observer {
             Glide.with(this@DetailsDeveloper)
                 .load("http://54.160.226.42:5000/uploads/${it.data?.photo.toString()}")

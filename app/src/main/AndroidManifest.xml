@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HumanResource2"
         android:usesCleartextTraffic="true">
-        <activity android:name=".home.detail.DetailsDeveloper"></activity>
+        <activity android:name=".approve.detail.DetailsApproveActivity"></activity>
+        <activity android:name=".profile.EditProfileActivity" />
+        <activity android:name=".home.detail.DetailsDeveloper" />
         <activity android:name=".profile.ProfileActivity" />
         <activity android:name=".home.HomeActivity" />
         <activity android:name=".register.RegisterActivity" />

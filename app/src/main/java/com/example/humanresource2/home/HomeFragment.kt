@@ -32,7 +32,6 @@ class HomeFragment : Fragment() {
         const val ID_DEV = "idDev"
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,8 +46,6 @@ class HomeFragment : Fragment() {
             viewModel.setHomeService(service)
         }
 
-//        binding.recyclerHome.adapter = HomeAdapter(it)
-//        binding.recyclerHome.layoutManager = GridLayoutManager(requireActivity(), 2)
         viewModel.callApiHome()
         subscribeLiveData()
         setRecyclerView()

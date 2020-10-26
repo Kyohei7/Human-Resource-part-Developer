@@ -50,5 +50,4 @@ class HomeAdapter(val items: ArrayList<HomeModel>, val listener: OnClickViewList
         fun OnClick(id: String)
     }
 
-
 }
