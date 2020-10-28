@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="200dp"
-        tools:context=".profile.EditProfileActivity">
+        tools:context=".profile.edit_profile.EditProfileActivity">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleImageView2"
@@ -142,6 +142,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_batal"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/datadiri"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="180dp"
@@ -159,237 +160,281 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:gravity="center"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nama Lengkap"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Nama Lengkap"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:gravity="center"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_job"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Job"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Job"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Location"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Location"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_status"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Status"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Status"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_description"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Description"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Description"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_skill"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Skill"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Skill"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Email"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Email"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_instagram"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Instagram"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Instagram"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_github"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Github"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Github"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="300dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
                     app:boxStrokeColor="@color/colorPrimary"
-                    app:hintTextColor="@color/colorPrimary"
-                    android:layout_marginHorizontal="8dp">
+                    app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_gitlab"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Gitlab"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/colorPrimary"
+                        android:hint="Gitlab"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="12dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="17dp"
                         android:textColor="@android:color/black"
-                        android:textColorHighlight="@color/colorPrimary" />
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
+        <TextView
+            android:id="@+id/pengalamankerja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Pengalaman Kerja"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datadiri" />
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_pengalaman_kerja"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datadiri">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="20dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintTextColor="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/posisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Web developer"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="12dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="17dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
 

@@ -11,19 +11,16 @@ import com.example.humanresource2.R
 import com.example.humanresource2.databinding.ActivityDetailsDeveloperBinding
 import com.example.humanresource2.helper.PreferencesHelper
 import com.example.humanresource2.home.HomeFragment
+import com.example.humanresource2.profile.ViewPagerAdapter
 import com.example.humanresource2.remote.ApiClient
 import com.example.humanresource2.service.DetailsApiService
 
 class DetailsDeveloper : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailsDeveloperBinding
-//    private lateinit var adapter: DetailsAdapter
     private lateinit var sharePref : PreferencesHelper
     private lateinit var viewModel: DetailsViewModel
-
-//    override fun layoutId(): Int {
-//        return R.layout.activity_details_developer
-//    }
+    private lateinit var viewPager : ViewPagerAdapter
 
     companion object {
         const val ID_DEV = "ID_DEV"
@@ -44,21 +41,19 @@ class DetailsDeveloper : AppCompatActivity() {
         if (id != null) {
             viewModel.detailsCallApi(id)
         }
-
-//        adapter = DetailsAdapter(supportFragmentManager)
-//        binding.viewpager.adapter = adapter
-//        binding.tablayout.setupWithViewPager(binding.viewpager)
+        viewPager = ViewPagerAdapter(supportFragmentManager)
+        binding.viewProfile.adapter = viewPager
+        binding.tabDetails.setupWithViewPager(binding.viewProfile)
     }
 
     private fun subscribeLiveData() {
-
-//        viewModel.isProgressLiveData.observe(this, Observer {
-//            if (it) {
-//                binding.progressbar.visibility = View.VISIBLE
-//            } else {
-//                binding.progressbar.visibility = View.GONE
-//            }
-//        })
+        viewModel.isProgressLiveData.observe(this, Observer {
+            if (it) {
+                binding.progressbar.visibility = View.VISIBLE
+            } else {
+                binding.progressbar.visibility = View.GONE
+            }
+        })
         viewModel.detailsLiveData.observe(this, Observer {
             Glide.with(this@DetailsDeveloper)
                 .load("http://54.160.226.42:5000/uploads/${it.data?.photo.toString()}")

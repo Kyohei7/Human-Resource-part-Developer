@@ -1,4 +1,4 @@
-package com.example.humanresource2.profile.experience
+package com.example.humanresource2.profile.add_experience
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardBackgroundColor="#fff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/position_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/logo"
+            android:fontFamily="@font/open_sans"
+            android:text="Android Developer"
+            android:textColor="#1F2A36"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/name_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/position_experience"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/logo"
+            android:fontFamily="@font/open_sans"
+            android:text="BukaLapak"
+            android:textColor="#46505C"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_company"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/logo"
+            android:fontFamily="@font/open_sans"
+            android:text="Oct 2019 - Oct 2020"
+            android:textColor="#9EA0A5"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/duration"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/logo"
+            android:fontFamily="@font/open_sans"
+            android:text="Lorem Lorem Lorem Lorem"
+            android:textColor="#9EA0A5"
+            android:textSize="16dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</layout>

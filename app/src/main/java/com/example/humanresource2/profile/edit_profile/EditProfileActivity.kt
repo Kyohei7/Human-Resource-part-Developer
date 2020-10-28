@@ -1,4 +1,4 @@
-package com.example.humanresource2.profile
+package com.example.humanresource2.profile.edit_profile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

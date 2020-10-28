@@ -1,4 +1,4 @@
-package com.example.humanresource2.profile.portfolio
+package com.example.humanresource2.profile.add_portfolio
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

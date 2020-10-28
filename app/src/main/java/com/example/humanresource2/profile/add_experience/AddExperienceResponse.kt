@@ -1,11 +1,11 @@
-package com.example.humanresource2.home.detail.portfolio
+package com.example.humanresource2.profile.add_experience
 
 
 import com.google.gson.annotations.SerializedName
 
-data class PortfolioResponse(
+data class AddExperienceResponse(
     @SerializedName("data")
-    val `data`: List<Data>,
+    val `data`: Data,
     @SerializedName("message")
     val message: String,
     @SerializedName("success")

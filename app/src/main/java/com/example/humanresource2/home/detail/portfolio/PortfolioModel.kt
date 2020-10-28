@@ -1,4 +1,7 @@
 package com.example.humanresource2.home.detail.portfolio
 
-class PortfolioModel {
-}
+data class PortfolioModel (
+
+        val id: String,
+        val photo: String
+)

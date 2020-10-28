@@ -18,6 +18,7 @@ import com.example.humanresource2.R
 import com.example.humanresource2.databinding.FragmentHomeBinding
 import com.example.humanresource2.helper.PreferencesHelper
 import com.example.humanresource2.home.detail.DetailsDeveloper
+import com.example.humanresource2.profile.ViewPagerAdapter
 import com.example.humanresource2.remote.ApiClient
 import com.example.humanresource2.service.HomeApiService
 
@@ -27,6 +28,7 @@ class HomeFragment : Fragment() {
     private lateinit var viewModel: HomeViewModel
     private lateinit var sharePref : PreferencesHelper
     private lateinit var recycleHome : HomeAdapter
+    private lateinit var viewPager : ViewPagerAdapter
 
     companion object {
         const val ID_DEV = "idDev"
@@ -63,6 +65,7 @@ class HomeFragment : Fragment() {
         })
         binding.recyclerHome.adapter = recycleHome
         binding.recyclerHome.layoutManager = GridLayoutManager(requireActivity(), 2)
+
     }
 
     private fun subscribeLiveData() {

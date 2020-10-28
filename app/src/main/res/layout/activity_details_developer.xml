@@ -227,15 +227,31 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="350dp"
-                android:layout_height="300dp"
+                android:layout_height="500dp"
                 android:layout_marginTop="76dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/details_github">
 
-                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:tabIndicatorColor="#5E50A1"
+                        app:tabIndicatorHeight="5dp"
+                        app:tabTextColor="#1F2A36"/>
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

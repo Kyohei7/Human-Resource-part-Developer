@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.humanresource2.R
 import com.example.humanresource2.databinding.ActivityDetailsApproveBinding
 import com.example.humanresource2.helper.PreferencesHelper
+import com.example.humanresource2.profile.ViewPagerAdapter
 import com.example.humanresource2.remote.ApiClient
 import com.example.humanresource2.service.DetailsApproveApiService
 import com.squareup.picasso.Picasso
@@ -17,6 +18,7 @@ class DetailsApproveActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsApproveBinding
     private lateinit var viewModel: DetailsApproveViewModel
     private lateinit var sharePref: PreferencesHelper
+    private lateinit var viewPager : ViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
