@@ -30,9 +30,7 @@ class ApproveViewModel: ViewModel() {
 
             }
 
-            override fun onResponse(
-                call: Call<ApproveResponse>,
-                response: Response<ApproveResponse>
+            override fun onResponse( call: Call<ApproveResponse>, response: Response<ApproveResponse>
             ) {
                 val list = response.body()?.data?.map {
                     ApproveModel(

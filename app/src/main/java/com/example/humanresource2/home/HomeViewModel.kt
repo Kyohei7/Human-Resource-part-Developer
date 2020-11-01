@@ -12,8 +12,8 @@ class HomeViewModel: ViewModel(), CoroutineScope {
     val isLoadingLiveData = MutableLiveData<Boolean>()
     val listLiveData = MutableLiveData<List<HomeModel>>()
 
-    override val coroutineContext: CoroutineContext
-        get() = Job() + Dispatchers.Main
+        override val coroutineContext: CoroutineContext
+            get() = Job() + Dispatchers.Main
 
     fun setHomeService(service: HomeApiService) {
         this.service = service

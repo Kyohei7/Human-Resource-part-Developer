@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface DetailsApiService {
 
-    @GET("developer/{id}")
+    @GET("developer/idDev/{id}")
     suspend fun getAllDevelopersById(@Path("id") id: Int): DetailsResponse
 
 }

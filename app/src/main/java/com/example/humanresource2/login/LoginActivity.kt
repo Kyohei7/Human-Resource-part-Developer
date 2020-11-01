@@ -13,6 +13,7 @@ import com.example.humanresource2.databinding.ActivityLoginBinding
 import com.example.humanresource2.helper.Constant
 import com.example.humanresource2.helper.PreferencesHelper
 import com.example.humanresource2.home.HomeActivity
+import com.example.humanresource2.login.post_profile.PostProfileActivity
 import com.example.humanresource2.remote.ApiClient
 import com.example.humanresource2.service.AuthApiService
 
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
         sharePreferencesHelper = PreferencesHelper(this)
@@ -60,15 +62,36 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun subscribeLiveData() {
-        viewModel.isLoginLiveData.observe(this, Observer {
-            Log.d("developer", "$it")
-
+        viewModel.isResponseLogin.observe(this, Observer {
             if (it) {
-                Toast.makeText(this, "Login Succcess", Toast.LENGTH_SHORT).show()
-                moveIntent()
-                finish()
+
+            }
+            else {
+                Toast.makeText(this, "FAILED", Toast.LENGTH_SHORT).show()
+            }
+        })
+        viewModel.isLoginLiveData.observe(this, Observer {
+            if (it) {
+                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
+                viewModel.isRegisterLiveData.observe(this, Observer {
+                    if (it) {
+                        Toast.makeText(this, "To Form", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this, PostProfileActivity::class.java))
+                    }
+                    else {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        finish()
+                    }
+                })
             } else {
-                Toast.makeText(this, "Login Failed!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "You Don't Have Access", Toast.LENGTH_SHORT).show()
+            }
+        })
+        viewModel.isToastLogin.observe(this, Observer {
+            if (it) {
+
+            } else {
+                Toast.makeText(this, "Fill The Blank!", Toast.LENGTH_SHORT).show()
             }
         })
     }

@@ -15,7 +15,7 @@ class HomeAdapter(val items: ArrayList<HomeModel>, val listener: OnClickViewList
 
     private lateinit var sharePref: PreferencesHelper
 
-    private fun getPhotoImage(file: String) : String = "http://54.160.226.42:5000/uploads/$file"
+    private fun getPhotoImage(file: String) : String = "http://18.234.106.45:8080/uploads/$file"
 
     fun addList(list: List<HomeModel>) {
         items.clear()

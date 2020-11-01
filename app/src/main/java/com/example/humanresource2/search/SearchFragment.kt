@@ -87,7 +87,7 @@ class SearchFragment : Fragment() {
             searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String): Boolean {
                     var search: ArrayList<HomeModel> = ArrayList()
-                    for (data in list) {
+                    for (data in it) {
                         if (data.name.contains(query) || data.location.contains(query)) {
                             search.add(data)
                         }
@@ -98,7 +98,7 @@ class SearchFragment : Fragment() {
 
                 override fun onQueryTextChange(newText: String): Boolean {
                     var search: ArrayList<HomeModel> = ArrayList()
-                    for (data in list) {
+                    for (data in it) {
                         if (data.name.contains(newText) || data.location.contains(newText)) {
                             search.add(data)
                         }

@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.humanresource2.R
 import com.example.humanresource2.databinding.ActivityRegisterBinding
+import com.example.humanresource2.helper.Constant
 import com.example.humanresource2.helper.PreferencesHelper
 import com.example.humanresource2.login.LoginActivity
 import com.example.humanresource2.remote.ApiClient
@@ -52,6 +53,7 @@ class RegisterActivity : AppCompatActivity() {
             Log.d("Register", "$it")
 
             if (it) {
+                sharePreferencesHelper.putBoolean(Constant.PREFERENCE_IS_REGISTER, true)
                 Toast.makeText(this, "Register Succcess", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)

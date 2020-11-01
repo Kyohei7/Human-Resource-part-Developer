@@ -30,8 +30,8 @@ class ApproveFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        sharePref = PreferencesHelper(requireContext())
         binding = FragmentApproveBinding.inflate(inflater)
+        sharePref = PreferencesHelper(requireContext())
 
         val service = ApiClient.getApiClient(this.requireContext())?.create(ApproveApiService::class.java)
         viewModel = ViewModelProvider(this).get(ApproveViewModel::class.java)
@@ -42,8 +42,9 @@ class ApproveFragment : Fragment() {
 
         recycleApprove = binding.recyclerApprove
         recycleApprove.adapter = ApproveAdapter(arrayListOf(), object : ApproveAdapter.onAdapterListener {
-            override fun onClick(confirm: ApproveModel) {
-                sharePref.putString(Constant.PREFERENCE_IS_ID_HIRE, confirm.id)
+            override fun onClick(approve: ApproveModel) {
+                sharePref.putString(Constant.PREFERENCE_IS_ID_HIRE, approve.id)
+                sharePref.putString(Constant.PREFERENCE_IS_STATUS, approve.status)
                 Toast.makeText(requireContext(),"TESSSSSSS", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(requireContext(), DetailsApproveActivity::class.java))
             }
@@ -55,6 +56,12 @@ class ApproveFragment : Fragment() {
         return binding.root
 
     }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getHireByID()
+    }
+
 
     private fun  subscribeLiveData() {
         viewModel.isApproveResponse.observe(viewLifecycleOwner, Observer {

@@ -1,5 +1,6 @@
 package com.example.humanresource2.approve
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,12 +30,13 @@ class ApproveAdapter(var dataApprove: ArrayList<ApproveModel>, var listener: onA
 
     override fun onBindViewHolder(holder: ApproveAdapter.ApproveHolder, position: Int) {
         val approve = dataApprove[position]
-        holder.itemView.name_company.text = approve.nameCompany
-        holder.itemView.name_project.text = approve.nameProject
-        holder.itemView.description.text = approve.description
-        holder.itemView.status_approve.text = approve.status
-        Picasso.get().load("http://54.160.226.42:5000/uploads" + approve.photo)
-        holder.itemView.iv_img_approve.setOnClickListener {
+        holder.view.name_company.text = approve.nameCompany
+        holder.view.name_project.text = approve.nameProject
+        holder.view.description.text = approve.description
+        holder.view.status_approve.text = approve.status
+        Picasso.get().load("http://18.234.106.45:8080/uploads" + approve.photo)
+                .into(holder.view.iv_img_approve)
+        holder.itemView.setOnClickListener {
             listener.onClick(approve)
         }
 
@@ -43,7 +45,7 @@ class ApproveAdapter(var dataApprove: ArrayList<ApproveModel>, var listener: onA
     class ApproveHolder(val view: View): RecyclerView.ViewHolder(view)
 
     interface onAdapterListener {
-        fun onClick(confirm: ApproveModel)
+        fun onClick(approve: ApproveModel)
     }
 
 }

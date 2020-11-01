@@ -90,7 +90,7 @@ class ProfileFragment : Fragment() {
                 if (it.data.idUser == sharePref.getString(Constant.PREFERENCES_ID)) {
                     sharePref.putString(Constant.PREFERENCES_IS_ID_DEV, it.data.idDeveloper.toString())
                     Glide.with(this@ProfileFragment)
-                            .load("http://54.160.226.42:5000/uploads/${it.data.photo.toString()}")
+                            .load("http://18.234.106.45:8080/uploads/${it.data.photo.toString()}")
                             .into(binding.circleImageView)
                     binding.profileName.text = it.data.nameDeveloper.toString()
                     binding.job.text = it.data.job

@@ -18,7 +18,7 @@ class PortfolioAdapter(val portfolio: ArrayList<PortfolioModel>): RecyclerView.A
 
     override fun onBindViewHolder(holder: PortfolioAdapter.HolderPortfolio, position: Int) {
         val portfolio = portfolio[position]
-        Picasso.get().load("http://54.160.226.42:5000/uploads/" + portfolio.photo).into(holder.view.iv_img_portfolio)
+        Picasso.get().load("http://18.234.106.45:8080/uploads/" + portfolio.photo).into(holder.view.iv_img_portfolio)
     }
 
     class HolderPortfolio(val view: View): RecyclerView.ViewHolder(view)
