@@ -15,7 +15,7 @@ data class Data(
     @SerializedName("gitlab")
     val gitlab: String,
     @SerializedName("id")
-    val id: String,
+    val id: String?,
     @SerializedName("id_user")
     val idUser: String,
     @SerializedName("instagram")

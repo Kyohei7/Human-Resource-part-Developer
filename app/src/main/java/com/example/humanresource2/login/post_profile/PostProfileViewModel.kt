@@ -27,7 +27,6 @@ class PostProfileViewModel: ViewModel() {
 
     fun postDeveloper(
             nameDev: RequestBody,
-            photo: MultipartBody.Part?,
             job: RequestBody,
             location: RequestBody,
             status: RequestBody,
@@ -37,19 +36,20 @@ class PostProfileViewModel: ViewModel() {
             instagram: RequestBody,
             github: RequestBody,
             gitlab: RequestBody,
+            photo: MultipartBody.Part?,
             idUser: RequestBody
     ) {
-            service.postDataDeveloper(nameDev, photo, job, location, status, description, skill,
-                    email, instagram, github, gitlab, idUser).enqueue(object : retrofit2.Callback<PostProfileResponse> {
+            service.postDataDeveloper(nameDev, job, location, status, description, skill,
+                    email, instagram, github, gitlab, photo, idUser).enqueue(object : retrofit2.Callback<PostProfileResponse> {
                 override fun onFailure(call: Call<PostProfileResponse>, t: Throwable) {
-                    TODO("Not yet implemented")
+
                 }
 
                 override fun onResponse(
                         call: Call<PostProfileResponse>,
                         response: Response<PostProfileResponse>
                 ) {
-                    response.body()?.data?.id?.let { sharePref.putString(Constant.PREFERENCES_IS_ID_DEV, it) }
+                    sharePref.putString(Constant.PREFERENCES_IS_ID_DEV, response.body()?.data?.id)
                     isPostResponse.value = true
                 }
 

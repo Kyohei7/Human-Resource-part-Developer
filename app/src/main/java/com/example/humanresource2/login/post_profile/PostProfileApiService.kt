@@ -13,7 +13,6 @@ interface PostProfileApiService {
     @POST("developer")
     fun postDataDeveloper(
             @Part("name_developer") nameDeveloper: RequestBody,
-            @Part photo: MultipartBody.Part?,
             @Part("job") job: RequestBody,
             @Part("location") location : RequestBody,
             @Part("status") status : RequestBody,
@@ -23,6 +22,7 @@ interface PostProfileApiService {
             @Part("instagram") instagram : RequestBody,
             @Part("github") github : RequestBody,
             @Part("gitlab") gitlab : RequestBody,
+            @Part photo: MultipartBody.Part?,
             @Part("id_user") idUser : RequestBody) : Call<PostProfileResponse>
 
 
