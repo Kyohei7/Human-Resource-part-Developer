@@ -74,16 +74,16 @@ class PostProfileActivity : AppCompatActivity() {
             val idUser = sharePref.getString(Constant.PREFERENCES_ID)
             Log.d("IDUSER", "$idUser")
             viewModel.postDeveloper(
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
-                    createPartFromString("Akbar"),
+                    createPartFromString(binding.etName.text.toString()),
+                    createPartFromString(binding.etJob.text.toString()),
+                    createPartFromString(binding.etLocation.text.toString()),
+                    createPartFromString(binding.etStatus.text.toString()),
+                    createPartFromString(binding.etDescription.text.toString()),
+                    createPartFromString(binding.etSkill.text.toString()),
+                    createPartFromString(binding.etEmail.text.toString()),
+                    createPartFromString(binding.etInstagram.text.toString()),
+                    createPartFromString(binding.etGithub.text.toString()),
+                    createPartFromString(binding.etGitlab.text.toString()),
                     photo,
                     createPartFromString("$idUser")
             )
